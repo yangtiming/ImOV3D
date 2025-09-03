@@ -1,0 +1,94 @@
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry]
+name = "imov3d"
+version = "0.1.0"
+description = "3D Object Detection from Multi-view Images via 3D-to-2D Queries"
+authors = ["ImOV3D Team"]
+readme = "README.md"
+packages = [{include = "models"}, {include = "utils"}, {include = "scannet"}, {include = "sunrgbd"}, {include = "lvis"}, {include = "pointnet2"}]
+
+[tool.poetry.dependencies]
+python = "^3.8"
+numpy = "^1.21.0"
+torch = "^2.0.0"
+torchvision = "^0.15.0"
+scipy = "^1.10.0"
+matplotlib = "^3.7.0"
+opencv-python = "^4.8.0"
+pillow = "^10.0.0"
+tqdm = "^4.66.0"
+pyyaml = "^6.0.0"
+requests = "^2.31.0"
+tensorboardx = "^2.6.0"
+wandb = "^0.16.0"
+plyfile = "^1.0.0"
+trimesh = "^2.35.0"
+
+[tool.poetry.group.test.dependencies]
+pytest = "^7.0.0"
+pytest-cov = "^4.0.0"
+pytest-mock = "^3.10.0"
+
+[tool.poetry.scripts]
+test = "pytest:main"
+tests = "pytest:main"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py", "*_test.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = [
+    "--strict-markers",
+    "--strict-config",
+    "--cov=models",
+    "--cov=utils", 
+    "--cov=scannet",
+    "--cov=sunrgbd",
+    "--cov=lvis",
+    "--cov=pointnet2",
+    "--cov-report=term-missing",
+    "--cov-report=html:htmlcov",
+    "--cov-report=xml:coverage.xml",
+    "--cov-fail-under=80"
+]
+markers = [
+    "unit: marks tests as unit tests (deselect with '-m \"not unit\"')",
+    "integration: marks tests as integration tests (deselect with '-m \"not integration\"')",
+    "slow: marks tests as slow (deselect with '-m \"not slow\"')"
+]
+
+[tool.coverage.run]
+source = ["models", "utils", "scannet", "sunrgbd", "lvis", "pointnet2"]
+omit = [
+    "*/tests/*",
+    "*/test_*",
+    "*/__pycache__/*",
+    "*/.*",
+    "setup.py",
+    "*/Data_Maker/*",
+    "*/PointCloudRender/*",
+    "*/demo_*",
+    "*/scripts/*"
+]
+
+[tool.coverage.report]
+exclude_lines = [
+    "pragma: no cover",
+    "def __repr__",
+    "if self.debug:",
+    "if settings.DEBUG",
+    "raise AssertionError",
+    "raise NotImplementedError",
+    "if 0:",
+    "if __name__ == .__main__.:"
+]
+
+[tool.coverage.html]
+directory = "htmlcov"
+
+[tool.coverage.xml]
+output = "coverage.xml"

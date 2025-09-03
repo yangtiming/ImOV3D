@@ -1,0 +1,97 @@
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+coverage.xml
+.tox/
+.nox/
+
+# Claude settings
+.claude/*
+
+# Build artifacts
+build/
+dist/
+*.egg-info/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.env
+.venv
+env/
+venv/
+ENV/
+env.bak/
+venv.bak/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Logs
+*.log
+
+# Machine learning artifacts
+*.pth
+*.pkl
+*.model
+wandb/
+lightning_logs/
+checkpoints/
+
+# Data directories
+data/
+datasets/
+*.h5
+*.hdf5
+
+# Temporary files
+*.tmp
+*.temp
+.tmp/
+tmp/
+
+# CUDA compilation cache
+.nv_fatb/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# PyTorch JIT
+*.jit
+
+# C extensions
+*.so
+
+# Distribution / packaging
+.Python
+develop-eggs/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
