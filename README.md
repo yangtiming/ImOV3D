@@ -131,9 +131,11 @@ Our code is based on [ImVoteNet](https://github.com/facebookresearch/imvotenet),
 ## Citation
 ```bibtex
 @article{yang2024imov3d,
-  title={ImOV3D: Learning Open-Vocabulary Point Clouds 3D Object Detection from Only 2D Images},
+  title={ImOV3D: Learning Open Vocabulary Point Clouds 3D Object Detection from Only 2D Images},
   author={Yang, Timing and Ju, Yuanliang and Yi, Li},
-  journal={NeurIPS 2024},
+  journal={Advances in Neural Information Processing Systems},
+  volume={37},
+  pages={141261--141291},
   year={2024}
 }
 ```
