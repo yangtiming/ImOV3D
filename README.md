@@ -83,7 +83,7 @@ cd ..
 
 
 
-  You can download then from [Baidu](https://pan.baidu.com/s/18v5VzVe3CtcUKwtiwqjEXg?pwd=0000).
+All weights are available on [🤗 Hugging Face](https://huggingface.co/TimingYang/ImOV3D) and [Baidu Cloud](https://pan.baidu.com/s/18v5VzVe3CtcUKwtiwqjEXg?pwd=0000).
 
 
 ## Training and Evaluation
