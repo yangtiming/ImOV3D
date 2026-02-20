@@ -51,14 +51,14 @@ cd ..
 
 ## Dataset Preparation
 
+
+
 ### Pretrain Stage
 
   For detailed guidance on setting up the dataset for the pretraining stage, see the [dataset instructions](./Data_Maker/).
 
 ### Adaptation
   See [Data Preparation](./Data_Maker/DATA_MAKER_DATASET_TRAINVAL_SUN_SCAN) for SUNRGBD or ScanNet.
-
-  You can also download Data from [Baidu](https://pan.baidu.com/s/18v5VzVe3CtcUKwtiwqjEXg?pwd=0000).
 
 ### Format
     --[data_name]  # Root directory of the dataset
@@ -83,7 +83,7 @@ cd ..
 
 
 
-All weights are available on [🤗 Hugging Face](https://huggingface.co/TimingYang/ImOV3D) and [Baidu Cloud](https://pan.baidu.com/s/18v5VzVe3CtcUKwtiwqjEXg?pwd=0000).
+All weights and data are available on [🤗 Hugging Face](https://huggingface.co/TimingYang/ImOV3D) and [Baidu Cloud](https://pan.baidu.com/s/18v5VzVe3CtcUKwtiwqjEXg?pwd=0000).
 
 
 ## Training and Evaluation
